@@ -27,7 +27,13 @@ class String
   end
 
   def count_sentences
-    self.split(/[\.+\!+\?+]/)
-    return self.length
+    self.split(/[\.\?\!]/)
+    sentences = 0
+    self.each do |sentence|
+      if sentence.length > 1
+        sentences += 1
+      end
+    end
+    return sentences
   end
 end
