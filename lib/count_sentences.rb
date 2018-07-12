@@ -27,6 +27,7 @@ class String
   end
 
   def count_sentences
+    require.pry
     self.split(/\.+|\?+|\!+/)
     return self.length
   end
